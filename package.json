@@ -1,0 +1,17 @@
+{
+  "name": "checklist_keeper",
+  "version": "1.0.0",
+  "description": "helpfull app for collecting checklists after audits",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stanislav Sysoiev",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.30"
+  }
+}
