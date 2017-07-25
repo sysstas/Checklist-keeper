@@ -27,7 +27,7 @@ app.use('/node_modules', express.static(__dirname + '/../node_modules'));
 app.get('/auditors', (req,res)=>{
 	console.log(arr);
 	res.json(arr);
-});
+});'172.21.164.171'
 */
 let serverPort = 3000;
 app.listen(serverPort, ()=> console.log('Server is running on ' + serverPort + ' port'));

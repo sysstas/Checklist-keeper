@@ -4,10 +4,11 @@
 	<title> CheckList Keeper</title>
 	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   	<link rel="stylesheet" type="text/css" href="style.css">
-  	<script type="text/javascript" src="node_modules/angular/angular.js"></script> 
+  	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+  	<script type="text/javascript" src="node_modules/angular-animate/angular-animate.js"></script>  
    	<script type="text/javascript" src="index.js"></script>     
 </head>
-<body ng-app>
+<body ng-app='dateExample'>
 	<div class="container">
 
 		<dir class="row">
@@ -17,24 +18,53 @@
 
 		<dir class="row">
 			<form><!-- Form block -->
-			  <div class="form-group">
-			    <label for="exampleInputEmail1">Об'єкт аудиту</label>
-			    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Підгороднянський РЕМ">
+
+			  <div class="form-group col-sm-12">
+			  	<div class="col-sm-6">
+				    <label for="objectOfAudit">Об'єкт аудиту</label>
+				    <input class="form-control" id="objectOfAudit" placeholder="Підгороднянський РЕМ" value="Підгороднянський РЕМ" required>
+			    </div>
 			  </div>
-			  <div class="form-group">
-			    <label for="exampleInputPassword1">Зауваження</label>
-			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Зауваження">
+
+			  <div class="form-group col-sm-12">
+			  	<div class="col-sm-2">
+			  		<label for="exampleInput">Дата аудиту</label>
+			    	<input class="form-control" type="date" id="exampleInput" name="input" ng-model="example.value"
+       placeholder="yyyy-MM-dd" min="2017-01-01" max="2020-12-31" required />
+			  	</div>			    
+       <!-- <tt>value = {{example.value | date: "yyyy-MM-dd"}}</tt><br/> -->		  
 			  </div>
-			  <div class="form-group">
-			    <label for="exampleInputFile">Завантажити припис</label>
-			    <input type="file" id="exampleInputFile">
-			    <p class="help-block">Завантажте скан копію припису сюди</p>
+			  	
+			  <div class="form-group col-sm-12">
+			  	<div class="col-sm-6">
+				    <label for="exampleInputPassword1">Аудитор</label>
+				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Зауваження">
+				</div>
 			  </div>
-			  <div class="checkbox">
+																  <div ng-init="checked = true">
+													  <label>
+													    <input type="checkbox" ng-model="checked" />
+													    Is visible
+													  </label>
+													  <div class="content-area sample-show-hide" ng-show="checked">
+													    Content...
+													  </div>
+													</div>
+
+			<!--   <div class="form-group col-sm-12">
+			  	<div class="col-sm-2">
+				    <label for="exampleInputFile">Завантажити припис</label>
+				    <input type="file" id="exampleInputFile">
+				    <p class="help-block">Завантажте скан копію припису сюди</p>
+				</div>
+			  </div> -->
+
+<!-- 			  <div class="checkbox">
 			    <label>
 			      <input type="checkbox"> Check me out
 			    </label>
-			  </div>
+			  </div> -->
+
 			  <button type="submit" class="btn btn-default">Зберегти</button>
 			</form><!-- / Form block -->
 		</dir>
@@ -45,9 +75,9 @@
 			</ul>
 		</dir>	
 	
-
-
 		
+
+
 
 			
 	</div><!-- Container -->
